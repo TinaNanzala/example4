@@ -7,14 +7,14 @@ class Mpesa_Account:
 		self.balance = self.balance + amount
 		sms ("Hello {}, you have successfuly deposited Ksh{} into your account {}. Your new M-pesa balance is Ksh{}.".format(self.name,amount,self.phone_number,self.balance))
 	def withdraw(self,amount):
-		 if self.balance>amount:
-			self.balance = self.balance - amount
+		if self.balance>amount:
+			self.balance = self.balance-amount
 			print ("Hello {}, you have successfully withdrawn Ksh{} from your account {}. Your new M-pesa balance is Ksh{}.".format(self.name,amount,self.phone_number,self.balance))
-        else:
-            print ("Sorry {}, you have insufficient funds to facilitate your withdrawal. Your current balance is Ksh{}.".format(self.name,self.balance))
+		else:
+			print ("Sorry {}, you have insufficient funds to facilitate your withdrawal. Your current balance is Ksh{}.".format(self.name,self.balance))
 
 	def check_balance(self):
-		print ("Hello {}, your M-pesa balance is Ksh{}".format(self.name,self.balance))
+			print ("Hello {}, your M-pesa balance is Ksh{}".format(self.name,self.balance))
 
 
 
